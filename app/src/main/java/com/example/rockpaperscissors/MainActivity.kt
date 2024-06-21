@@ -52,15 +52,15 @@ class MainActivity : AppCompatActivity() {
         val imageApp = findViewById<ImageView>(R.id.image_app)
         when (options[num]) {
             "Rock" -> {
-                imageApp.setImageResource(R.drawable.pedra)
+                imageApp.setImageResource(R.drawable.rock_icon)
             }
 
             "Paper" -> {
-                imageApp.setImageResource(R.drawable.papel)
+                imageApp.setImageResource(R.drawable.paper_icon)
             }
 
             "Scissors" -> {
-                imageApp.setImageResource(R.drawable.tesoura)
+                imageApp.setImageResource(R.drawable.scissors_icon)
             }
         }
 

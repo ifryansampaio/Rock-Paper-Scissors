@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">RockPaperScissors</string>
+    <string name="rock_icon">rock_icon</string>
+    <string name="scissors_icon">scissors_icon</string>
+    <string name="white_circle">white_circle</string>
+    <string name="choose_an_option_below">Choose an option below</string>
+    <string name="result">RESULT</string>
+    <string name="app_option">App Option</string>
+    <string name="paper_icon">paper_icon</string>
 </resources>

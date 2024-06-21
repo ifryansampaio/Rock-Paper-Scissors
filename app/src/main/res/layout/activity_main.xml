@@ -5,81 +5,146 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/gradient_background"
     tools:context=".MainActivity">
+
+    <View
+        android:id="@+id/head_box"
+        android:layout_width="325dp"
+        android:layout_height="87dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/border_box"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <View
+        android:id="@+id/score_box"
+        android:layout_width="77dp"
+        android:layout_height="62dp"
+        android:layout_marginEnd="13dp"
+        android:background="@drawable/border_radius"
+        android:backgroundTint="@color/white"
+        app:layout_constraintBottom_toBottomOf="@+id/head_box"
+        app:layout_constraintEnd_toEndOf="@+id/head_box"
+        app:layout_constraintTop_toTopOf="@+id/head_box" />
 
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="58dp"
-        android:text="App Option"
+        android:layout_marginTop="150dp"
+        android:text="@string/app_option"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="163dp"
+        android:layout_height="179dp"
+        android:layout_marginBottom="200dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/triangle" />
+
+    <ImageView
         android:id="@+id/image_app"
         android:layout_width="120dp"
         android:layout_height="120dp"
-        android:layout_marginTop="22dp"
+        android:layout_marginTop="12dp"
+        android:contentDescription="@string/white_circle"
         android:onClick="sort"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView"
-        app:srcCompat="@drawable/padrao" />
+        app:srcCompat="@drawable/white_circle" />
 
     <ImageView
         android:id="@+id/image_rock"
         android:layout_width="100dp"
         android:layout_height="100dp"
+        android:contentDescription="@string/rock_icon"
         android:onClick="choiceRock"
-        app:layout_constraintEnd_toStartOf="@+id/image_paper"
+        app:layout_constraintEnd_toEndOf="@+id/imageView2"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/image_paper"
-        app:srcCompat="@drawable/pedra" />
+        app:srcCompat="@drawable/rock_icon"
+        tools:layout_editor_absoluteY="327dp" />
 
     <ImageView
         android:id="@+id/image_paper"
         android:layout_width="100dp"
         android:layout_height="100dp"
-        android:layout_marginTop="22dp"
+        android:layout_marginBottom="195dp"
+        android:contentDescription="@string/paper_icon"
         android:onClick="choicePaper"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2"
-        app:srcCompat="@drawable/papel" />
+        app:srcCompat="@drawable/paper_icon" />
 
     <ImageView
         android:id="@+id/image_scissors"
         android:layout_width="100dp"
         android:layout_height="100dp"
+        android:contentDescription="@string/scissors_icon"
         android:onClick="choiceScissors"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/image_paper"
-        app:layout_constraintTop_toTopOf="@+id/image_paper"
-        app:srcCompat="@drawable/tesoura" />
-
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="65dp"
-        android:text="Choose an option below "
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/image_app" />
+        app:layout_constraintStart_toStartOf="@+id/imageView2"
+        app:srcCompat="@drawable/scissors_icon"
+        tools:layout_editor_absoluteY="327dp" />
 
     <TextView
         android:id="@+id/text_result"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
-        android:layout_marginTop="65dp"
         android:layout_marginEnd="20dp"
-        android:text="RESULT"
+        android:text="@string/result"
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/image_paper" />
+        tools:layout_editor_absoluteY="574dp" />
+
+    <TextView
+        android:id="@+id/head_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="13dp"
+        android:fontFamily="@font/aldrich"
+        android:lines="3"
+        android:text="ROCK\nPAPER\nSCISSORS"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/head_box"
+        app:layout_constraintStart_toStartOf="@+id/head_box"
+        app:layout_constraintTop_toTopOf="@+id/head_box" />
+
+    <TextView
+        android:id="@+id/text_view_score"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/aldrich"
+        android:text="SCORE"
+        android:textSize="9dp"
+        app:layout_constraintEnd_toEndOf="@+id/score_box"
+        app:layout_constraintStart_toStartOf="@+id/score_box"
+        app:layout_constraintTop_toTopOf="@+id/score_box" />
+
+    <TextView
+        android:id="@+id/text_score"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="0"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="@+id/score_box"
+        app:layout_constraintStart_toStartOf="@+id/score_box"
+        app:layout_constraintTop_toTopOf="@+id/score_box" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
