@@ -22,6 +22,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     lateinit var userChoice: String
+    var score: Int = 0
 
     fun choiceRock (view: View) {
         userChoice = "Rock" //Coloca a escolha do usuario na variavel.
@@ -69,7 +70,7 @@ class MainActivity : AppCompatActivity() {
 
     fun winner (userChoice: String, machineChoice: String) {
         val textResult = findViewById<TextView>(R.id.text_result)
-
+        val textScore = findViewById<TextView>(R.id.text_score)
         if (userChoice == machineChoice) {
             textResult.setText("DRAW!!!")
         } else {
@@ -77,10 +78,14 @@ class MainActivity : AppCompatActivity() {
                 userChoice == "Rock" && machineChoice == "Paper" -> textResult.setText("YOU LOSE!!!")
                 userChoice == "Paper" && machineChoice == "Scissors" -> textResult.setText("YOU LOSE!!!")
                 userChoice == "Scissors" && machineChoice == "Rock" -> textResult.setText("YOU LOSE!!!")
-                userChoice == "Rock" && machineChoice == "Scissors" -> textResult.setText("YOU WIN!!!")
-                userChoice == "Paper" && machineChoice == "Rock" -> textResult.setText("YOU WIN!!!")
-                userChoice == "Scissors" && machineChoice == "Paper" -> textResult.setText("YOU WIN!!!")
+
+                else -> {
+                    textResult.setText("YOU WIN!!!")
+                    score += 1
+                    textScore.setText(score.toString())
+                }
             }
+
         }
     }
 
