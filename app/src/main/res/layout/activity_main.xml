@@ -35,8 +35,9 @@
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="140dp"
-        android:text="@string/app_option"
+        android:layout_marginTop="128dp"
+        android:text="MACHINE"
+        android:textColor="#FFFFFF"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -45,7 +46,7 @@
         android:id="@+id/imageView2"
         android:layout_width="163dp"
         android:layout_height="179dp"
-        android:layout_marginBottom="140dp"
+        android:layout_marginBottom="165dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -55,12 +56,12 @@
         android:id="@+id/image_app"
         android:layout_width="120dp"
         android:layout_height="120dp"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="150dp"
         android:contentDescription="@string/white_circle"
         android:onClick="sort"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/white_circle" />
 
     <ImageView
@@ -68,7 +69,7 @@
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:layout_marginEnd="135dp"
-        android:layout_marginBottom="250dp"
+        android:layout_marginBottom="275dp"
         android:contentDescription="@string/rock_icon"
         android:onClick="choiceRock"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -80,7 +81,7 @@
         android:id="@+id/image_paper"
         android:layout_width="100dp"
         android:layout_height="100dp"
-        android:layout_marginBottom="135dp"
+        android:layout_marginBottom="165dp"
         android:contentDescription="@string/paper_icon"
         android:onClick="choicePaper"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -93,7 +94,7 @@
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:layout_marginStart="135dp"
-        android:layout_marginBottom="250dp"
+        android:layout_marginBottom="275dp"
         android:contentDescription="@string/scissors_icon"
         android:onClick="choiceScissors"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -105,8 +106,9 @@
         android:id="@+id/text_result"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="50dp"
+        android:layout_marginBottom="100dp"
         android:text="@string/result"
+        android:textColor="#FFFFFF"
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -137,7 +139,8 @@
         android:textSize="9dp"
         app:layout_constraintEnd_toEndOf="@+id/score_box"
         app:layout_constraintStart_toStartOf="@+id/score_box"
-        app:layout_constraintTop_toTopOf="@+id/score_box" />
+        app:layout_constraintTop_toTopOf="@+id/score_box"
+        tools:ignore="TextSizeCheck" />
 
     <TextView
         android:id="@+id/text_score"
@@ -149,5 +152,31 @@
         app:layout_constraintEnd_toEndOf="@+id/score_box"
         app:layout_constraintStart_toStartOf="@+id/score_box"
         app:layout_constraintTop_toTopOf="@+id/score_box" />
+
+    <Button
+        android:id="@+id/button_reset"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:backgroundTint="#0386F8"
+        android:onClick="reset"
+        android:text="O"
+        android:textColor="#0386F8"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:clickable="true"
+        android:onClick="reset"
+        app:layout_constraintBottom_toBottomOf="@+id/button_reset"
+        app:layout_constraintEnd_toEndOf="@+id/button_reset"
+        app:layout_constraintStart_toStartOf="@+id/button_reset"
+        app:layout_constraintTop_toTopOf="@+id/button_reset"
+        app:srcCompat="@drawable/reset_icon" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

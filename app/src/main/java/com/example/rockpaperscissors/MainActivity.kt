@@ -15,6 +15,8 @@ class MainActivity : AppCompatActivity() {
     // Declarar lateinit para inicializar posteriormente
     private lateinit var userChoice: String
     private var score: Int = 0
+    private lateinit var textScore: TextView
+    private lateinit var imageApp: ImageView
     private lateinit var scaleAnim: Animation
     private lateinit var imageViewRock: ImageView
     private lateinit var imageViewPaper: ImageView
@@ -31,6 +33,8 @@ class MainActivity : AppCompatActivity() {
         imageViewRock = findViewById(R.id.image_rock) // Adicionar lateinit
         imageViewPaper = findViewById(R.id.image_paper) // Adicionar lateinit
         imageViewScissors = findViewById(R.id.image_scissors) // Adicionar lateinit
+        textScore = findViewById<TextView>(R.id.text_score)
+        imageApp = findViewById<ImageView>(R.id.image_app)
 
         // Aplicar insets de janela para compatibilidade com gestos de borda
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
@@ -71,7 +75,6 @@ class MainActivity : AppCompatActivity() {
         val options = arrayOf("Rock", "Paper", "Scissors")
         val num = options.indices.random()
 
-        val imageApp = findViewById<ImageView>(R.id.image_app)
         when (options[num]) {
             "Rock" -> {
                 imageApp.setImageResource(R.drawable.rock_icon)
@@ -89,7 +92,6 @@ class MainActivity : AppCompatActivity() {
 
     fun winner(userChoice: String, machineChoice: String) {
         val textResult = findViewById<TextView>(R.id.text_result)
-        val textScore = findViewById<TextView>(R.id.text_score)
         if (userChoice == machineChoice) {
             textResult.text = "DRAW!!!" // Atualizar para usar .text ao invés de .setText
         } else {
@@ -104,5 +106,10 @@ class MainActivity : AppCompatActivity() {
                 }
             }
         }
+    }
+
+    fun reset(view: View){
+        textScore.text = "0"
+        imageApp.setImageResource(R.drawable.white_circle)
     }
 }
