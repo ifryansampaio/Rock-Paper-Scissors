@@ -153,29 +153,15 @@
         app:layout_constraintStart_toStartOf="@+id/score_box"
         app:layout_constraintTop_toTopOf="@+id/score_box" />
 
-    <Button
-        android:id="@+id/button_reset"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+    <ImageButton
+        android:id="@+id/imageButton2"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
         android:layout_marginBottom="16dp"
-        android:backgroundTint="#0386F8"
-        android:onClick="reset"
-        android:text="O"
-        android:textColor="#0386F8"
+        android:background="@drawable/gradient_button"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="30dp"
-        android:layout_height="30dp"
-        android:clickable="true"
-        android:onClick="reset"
-        app:layout_constraintBottom_toBottomOf="@+id/button_reset"
-        app:layout_constraintEnd_toEndOf="@+id/button_reset"
-        app:layout_constraintStart_toStartOf="@+id/button_reset"
-        app:layout_constraintTop_toTopOf="@+id/button_reset"
+        app:layout_constraintStart_toStartOf="parent"
         app:srcCompat="@drawable/reset_icon" />
 
 
