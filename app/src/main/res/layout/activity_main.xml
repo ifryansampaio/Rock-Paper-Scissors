@@ -8,6 +8,7 @@
     android:background="@drawable/gradient_background"
     tools:context=".MainActivity">
 
+    <!-- Caixa principal -->
     <View
         android:id="@+id/head_box"
         android:layout_width="325dp"
@@ -19,7 +20,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-
+    <!-- Caixa de pontuação -->
     <View
         android:id="@+id/score_box"
         android:layout_width="77dp"
@@ -31,6 +32,7 @@
         app:layout_constraintEnd_toEndOf="@+id/head_box"
         app:layout_constraintTop_toTopOf="@+id/head_box" />
 
+    <!-- Título "MACHINE" -->
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
@@ -42,6 +44,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <!-- Imagem principal -->
     <ImageView
         android:id="@+id/imageView2"
         android:layout_width="163dp"
@@ -52,6 +55,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:srcCompat="@drawable/triangle" />
 
+    <!-- Círculo branco de escolha -->
     <ImageView
         android:id="@+id/image_app"
         android:layout_width="120dp"
@@ -64,6 +68,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/white_circle" />
 
+    <!-- Ícones de escolha: Pedra, Papel, Tesoura -->
     <ImageView
         android:id="@+id/image_rock"
         android:layout_width="100dp"
@@ -102,6 +107,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:srcCompat="@drawable/scissors_icon" />
 
+    <!-- Resultado do jogo -->
     <TextView
         android:id="@+id/text_result"
         android:layout_width="wrap_content"
@@ -115,6 +121,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
+    <!-- Título "ROCK PAPER SCISSORS" -->
     <TextView
         android:id="@+id/head_title"
         android:layout_width="wrap_content"
@@ -129,6 +136,7 @@
         app:layout_constraintStart_toStartOf="@+id/head_box"
         app:layout_constraintTop_toTopOf="@+id/head_box" />
 
+    <!-- Título "SCORE" -->
     <TextView
         android:id="@+id/text_view_score"
         android:layout_width="wrap_content"
@@ -136,12 +144,13 @@
         android:layout_marginTop="8dp"
         android:fontFamily="@font/aldrich"
         android:text="SCORE"
-        android:textSize="9dp"
+        android:textSize="9sp"
         app:layout_constraintEnd_toEndOf="@+id/score_box"
         app:layout_constraintStart_toStartOf="@+id/score_box"
         app:layout_constraintTop_toTopOf="@+id/score_box"
         tools:ignore="TextSizeCheck" />
 
+    <!-- Pontuação atual -->
     <TextView
         android:id="@+id/text_score"
         android:layout_width="wrap_content"
@@ -153,6 +162,7 @@
         app:layout_constraintStart_toStartOf="@+id/score_box"
         app:layout_constraintTop_toTopOf="@+id/score_box" />
 
+    <!-- Botão de reset -->
     <ImageButton
         android:id="@+id/imageButton2"
         android:layout_width="100dp"
@@ -164,6 +174,5 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:srcCompat="@drawable/reset_icon" />
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>
