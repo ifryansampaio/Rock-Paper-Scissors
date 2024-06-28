@@ -3,5 +3,15 @@
     <style name="Base.Theme.RockPaperScissors" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Customize your dark theme here. -->
         <!-- <item name="colorPrimary">@color/my_dark_primary</item> -->
+
+        <!-- Primary color -->
+        <item name="colorPrimary">@color/backblue</item>
+        <item name="colorPrimaryVariant">@color/backhighblue</item>
+        <item name="colorOnPrimary">@color/white</item>
+
+        <!-- Secondary color -->
+        <item name="colorSecondary">@color/lightblue</item>
+        <item name="colorSecondaryVariant">@color/lighthighblue</item>
+        <item name="colorOnSecondary">@color/white</item>
     </style>
 </resources>
