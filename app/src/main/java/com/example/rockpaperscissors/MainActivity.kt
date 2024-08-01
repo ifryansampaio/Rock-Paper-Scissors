@@ -109,7 +109,8 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun reset(view: View){
-        textScore.text = "0"
+        score = 0
+        textScore.text = score.toString()
         imageApp.setImageResource(R.drawable.white_circle)
     }
 }
